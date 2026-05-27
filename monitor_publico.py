@@ -57,7 +57,7 @@ st.markdown("""
   }
   .stApp, .main, .block-container {
     background-color: #0f1923 !important;
-    padding-top: 1rem;
+    padding-top: 3rem;
   }
   section[data-testid="stSidebar"] { display: none !important; }
 
