@@ -61,6 +61,14 @@ st.markdown("""
   }
   section[data-testid="stSidebar"] { display: none !important; }
 
+  /* ── Ocultar la barra de herramientas (Stop, Fork, GitHub, tres puntos) ── */
+  [data-testid="stToolbar"] {
+    display: none !important;
+  }
+  [data-testid="stHeader"] button {
+    display: none !important;
+  }
+
   /* ── Header ── */
   .header-wrap {
     background: linear-gradient(135deg, #0f1923 0%, #162032 100%);
@@ -238,11 +246,9 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-
 # ── Session state ──────────────────────────────────────────────────────────────
 if "barrio" not in st.session_state:
     st.session_state["barrio"] = list(BARRIOS.keys())[0]
-
 
 # ── Carga de datos ─────────────────────────────────────────────────────────────
 @st.cache_data(ttl=60)
@@ -273,7 +279,6 @@ def cargar_datos(sheet_id, gid):
     except Exception as e:
         return pd.DataFrame(), str(e)
 
-
 def tendencia(serie, ultimos=10):
     """Devuelve emoji + texto descriptivo de la tendencia reciente."""
     s = serie.dropna()
@@ -286,7 +291,6 @@ def tendencia(serie, ultimos=10):
         return "trend-up", f"↑ +{delta:.1f}"
     else:
         return "trend-down", f"↓ {delta:.1f}"
-
 
 def mini_chart(df, col, color, unidad, titulo):
     if col not in df.columns:
@@ -332,7 +336,6 @@ def mini_chart(df, col, color, unidad, titulo):
         hovermode="x unified", showlegend=False,
     )
     return fig
-
 
 # ══════════════════════════════════════════════════════════════════════════════
 #  LAYOUT
