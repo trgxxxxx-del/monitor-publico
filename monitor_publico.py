@@ -16,19 +16,19 @@ BARRIOS = {
     },
     "Barrio Sur": {
         "sheet_id": "1Qgu_M7BXpV1pT2AlVP_ZrpnqnMxksUWNOzu25J6SegQ",
-        "gid": "35635042",
+        "gid": "1907877979",
         "coords": (-26.856000, -65.210000),
         "emoji": "🏘️",
     },
     "Barrio Norte": {
         "sheet_id": "1Qgu_M7BXpV1pT2AlVP_ZrpnqnMxksUWNOzu25J6SegQ",
-        "gid": "801290369",
+        "gid": "145148471",
         "coords": (-26.820000, -65.210000),
         "emoji": "🏙️",
     },
     "Yerba Buena": {
         "sheet_id": "1Qgu_M7BXpV1pT2AlVP_ZrpnqnMxksUWNOzu25J6SegQ",
-        "gid": "1998468375",
+        "gid": "2135910315",
         "coords": (-26.816000, -65.260000),
         "emoji": "🌿",
     },
