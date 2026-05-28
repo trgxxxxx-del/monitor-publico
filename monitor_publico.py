@@ -243,9 +243,36 @@ st.markdown("""
   footer { visibility: hidden; }
   a[target="_blank"]::after { display: none !important; }
   [data-testid="stDecoration"] { display: none; }
+
+  /* Ocultar el menú de Streamlit en esquina inferior derecha */
+  #MainMenu {
+    display: none !important;
+  }
+  
+  /* Ocultar el watermark/branding de Streamlit */
+  [data-testid="stAppViewBlockContainer"] ~ div {
+    display: none !important;
+  }
+  
+  footer {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  
+  /* Ocultar el botón flotante inferior derecho (Streamlit badge) */
+  .viewerBadge_container__r5tak,
+  .viewerBadge_link__qRIco,
+  [class*="viewerBadge"] {
+    display: none !important;
+  }
+  
+  /* Selector más agresivo para el badge */
+  div[class*="streamlit-badge"],
+  a[href*="streamlit.io"] {
+    display: none !important;
+  }
 </style>
 """, unsafe_allow_html=True)
-
 # ── Session state ──────────────────────────────────────────────────────────────
 if "barrio" not in st.session_state:
     st.session_state["barrio"] = list(BARRIOS.keys())[0]
